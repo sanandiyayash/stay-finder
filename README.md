@@ -1,0 +1,4 @@
+# Stay Finder
+
+I developed a system for displaying hotels, villas, and other staying places using Node.js and MongoDB, facilitating efficient CRUD operations for rental properties. The integration of Mapbox's API allowed for enhanced geospatial data visualization, enabling users to analyze property locations effectively. A robust review system was implemented with RESTful API endpoints and MongoDB, allowing users to seamlessly post, edit, and delete reviews. User authentication was ensured through Passport.js, utilizing Passport Local and Passport-Local-Mongoose strategies, which enhanced security. Express.js was used for server-side routing and middleware, optimizing API performance and scalability. These implementations collectively provided a secure, efficient, and user-friendly platform for viewing and reviewing hotels, villas, and other staying places.
+[USE IT](https://stay-finder.onrender.com/listings)
