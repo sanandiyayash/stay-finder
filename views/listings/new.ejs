@@ -29,16 +29,18 @@
                         <div class="valid-feedback">Looks good</div>
                     </div>
                     <div class="mb-3 col-8">
-                        <label for="listing[category]" class="form-label">category</label>
-                        <select class="form-select" name="listing[category]" aria-label="Default select example">
-                            <option selected>Open this select menu</option>
-                            <option value="farmHouse">Farm House</option>
-                            <option value="villa">Villa</option>
+                        <label for="listing[category]" class="form-label">Category</label>
+                        <select id="categorySelect" class="form-select" name="listing[category]"
+                            aria-label="Default select example" required>
+                            <option value="" selected>Where is your stay place.</option>
+                            <option value="hotel">In City</option>
                             <option value="mountain">Mountain</option>
+                            <option value="farmHouse">Farm House</option>
                             <option value="dome">Domes</option>
                             <option value="houseBoat">House Boat</option>
-                            <option value="house">House</option>
                         </select>
+                        <div class="invalid-feedback">Stay location is Required</div>
+                        <div class="valid-feedback">Looks good</div>
                     </div>
                 </div>
                 <div class="row">

@@ -61,43 +61,12 @@ router.get(
   wrapAsync(listingControler.editlisting)
 );
 
+
+// category
+
+router.get(
+  "/category/:category",
+  wrapAsync(listingControler.showcategory)
+)
 module.exports = router;
 
-// //index route
-// // router.get("/", wrapAsync(listingControler.index));
-
-// //new route //here we have keep this listings before show route because if we keep it after show route then it will take new as id in show route
-// router.get("/new", isloggedIn, listingControler.rendernewform);
-
-// //create route//in db
-// router.post(
-//   "/", isloggedIn,
-//   vallidateListing,
-//   wrapAsync(listingControler.create)
-// );
-
-// //show route //single(personal) listing
-// router.get(
-//   "/:id",
-//   wrapAsync(listingControler.showlisting)
-// );
-
-// //edit route
-// router.get(
-//   "/:id/edit", isloggedIn, isOwner,
-//   wrapAsync(listingControler.editlisting)
-// );
-
-// //update route
-// router.put(
-//   "/:id", isloggedIn,
-//   isOwner,
-//   vallidateListing,
-//   wrapAsync(listingControler.updatelisting)
-// );
-
-// //delete route
-// router.delete(
-//   "/:id", isloggedIn, isOwner,
-//   wrapAsync(listingControler.destroylisting)
-// );

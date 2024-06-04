@@ -19,7 +19,7 @@ const listingSchema = Schema({
   country: String,
   category: {
     type: String,
-    // enum: ["farmHouse", "house", "villa", "mountain", "dome", "houseBoat"]
+    required: true,
   },
   reviews: [
     {
@@ -42,7 +42,7 @@ const listingSchema = Schema({
       required: true
     }
   }
-});
+}, { timestamps: true });
 
 listingSchema.post("findOneAndDelete", async function (listing) {
   if (listing) {

@@ -1,21 +1,45 @@
-// Example starter JavaScript for disabling form submissions if there are invalid fields
+
 (() => {
     'use strict'
 
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    const forms = document.querySelectorAll('.needs-validation')
+    // const forms = document.querySelectorAll('.needs-validation')
 
-    // Loop over them and prevent submission
+    // // Loop over them and prevent submission
+    // Array.from(forms).forEach(form => {
+    //     form.addEventListener('submit', event => {
+    //         if (!form.checkValidity()) {
+    //             event.preventDefault()
+    //             event.stopPropagation()
+    //         }
+
+    //         form.classList.add('was-validated')
+    //     }, false)
+    // })
+
+    const forms = document.querySelectorAll('.needs-validation');
+
     Array.from(forms).forEach(form => {
         form.addEventListener('submit', event => {
-            if (!form.checkValidity()) {
-                event.preventDefault()
-                event.stopPropagation()
+            const categorySelect = document.getElementById('categorySelect');
+            if (!form.checkValidity() || categorySelect.value === "") {
+                event.preventDefault();
+                event.stopPropagation();
+                if (categorySelect.value === "") {
+                    categorySelect.setCustomValidity('Please select a valid stay place.');
+                    categorySelect.classList.add('is-invalid');
+                } else {
+                    categorySelect.setCustomValidity('');
+                    categorySelect.classList.remove('is-invalid');
+                }
+            } else {
+                categorySelect.setCustomValidity('');
+                categorySelect.classList.remove('is-invalid');
             }
 
-            form.classList.add('was-validated')
-        }, false)
-    })
+            form.classList.add('was-validated');
+        }, false);
+    });
 })();
 
 

@@ -53,13 +53,11 @@ body {
   box-shadow: none;
 }
 
-.fa-compass {
-  color: #fe424d;
-  font-size: 2rem;
-}
-
 .nav-link {
   color: #222222 !important;
+}
+.nav-link:hover {
+  color: #fe424d !important;
 }
 
 .search-conatainer {
@@ -78,7 +76,7 @@ body {
 
 .btn-search:hover {
   background-color: #fe424d;
-  color: white;
+  color: white !important;
 }
 
 .signup,
@@ -281,7 +279,10 @@ body {
 
   align-items: center;
 }
-
+.filter-container a {
+  color: #2b2b2b;
+  text-decoration: none;
+}
 .filter {
   display: flex;
   flex-direction: column;
@@ -306,5 +307,19 @@ body {
   }
   .generate-btn {
     background-color: #fe424d !important;
+  }
+  .search-conatainer {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #filters {
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .filter-container {
+    white-space: nowrap;
   }
 }
