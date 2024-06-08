@@ -17,15 +17,27 @@
                     <button class="btn btn-search border" type="submit">Search</button>
                 </form>
             </div>
-            <div class="navbar-nav ms-auto">
-                <% if(!currentUser){ %>
-                    <a class="nav-link btn btn-dark btn-sm mt-2 signup generate-btn" href="/signup">Signup</a>
-                    <a class="nav-link btn btn-dark btn-sm mt-2 login generate-btn" href="/login">login</a>
 
-                    <% } else { %>
-                        <a class="nav-link btn btn-dark btn-sm mt-2 generate-btn" href="/logout">logout</a>
-                        <% } %>
+            <div class="navbar-nav ms-auto">
+                <% if(currentUser){ %>
+                    <div class="profile">
+                        <p class="profile-icon">
+                            <i class="fa-solid fa-user"></i>
+                        </p>
+                        <p class="profile-username">
+                            <%= currentUser.username %>
+                        </p>
+                    </div>
+                    <% } %>
+                        <% if(!currentUser){ %>
+                            <a class="nav-link btn btn-dark btn-sm mt-2 signup generate-btn" href="/signup">Signup</a>
+                            <a class="nav-link btn btn-dark btn-sm mt-2 login generate-btn" href="/login">login</a>
+
+                            <% } else { %>
+                                <a class="nav-link btn btn-dark btn-sm mt-2 generate-btn" href="/logout">logout</a>
+                                <% } %>
             </div>
+
         </div>
     </div>
 </nav>

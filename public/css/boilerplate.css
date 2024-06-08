@@ -88,6 +88,22 @@ body {
   padding-right: 0.9rem !important;
   padding-left: 0.9rem !important;
 }
+.profile {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+.profile-icon {
+  font-size: 1.2rem;
+  margin: 0;
+  margin-right: 10px;
+}
+.profile-username {
+  font-size: 25px;
+  margin: 0;
+}
 
 /* --footer-- */
 .f-info {
@@ -213,6 +229,7 @@ body {
 
 .generate-btn:hover {
   background-color: #fe424d !important;
+  color: white !important;
 }
 
 .update-delete {
@@ -302,6 +319,9 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
+  .profile {
+    align-self: baseline;
+  }
   #map {
     height: 35vh;
   }
